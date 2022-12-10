@@ -1,7 +1,7 @@
 export const GithubLogo = () => {
   return (
     <a
-      href="https://github.com/sebastiancarlos/shitify.js"
+      href="https://github.com/sebastiancarlos/shitify"
       rel="noopener noreferrer"
       target="_blank"
       className="github-link"
