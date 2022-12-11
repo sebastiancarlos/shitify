@@ -110,6 +110,13 @@ h2 {
   color: transparent;
 }
 
+@media (max-width: 768px) {
+  h2 {
+    font-size: 3em;
+    padding: 0 0.5em;
+  }
+}
+
 .background-image {
   background-image: url(/poo-background.webp);
   opacity: 0.7;
