@@ -19,10 +19,11 @@ function App() {
     setShouldRenderBsod(true);
   };
 
+  // When an element with class "animateOnViewport" enters the viewport, toggle simple animation
+  // by adding the class "inViewport" to the element.
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry);
         entry.target.classList.toggle("inViewport", entry.isIntersecting);
       });
     });
@@ -30,6 +31,13 @@ function App() {
       observer.observe(el);
     });
   });
+
+  const scrollToSection = (scrollTo: "features" | "endorsement") => {
+    const element = document.getElementById(scrollTo);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="App">
@@ -53,13 +61,15 @@ function App() {
           Adds Errors to Your Code
         </h2>
         <div className="button-container animateOnViewport">
-          <button className="main" onClick={handleButtonClick}>
+          <button className="main" onClick={() => scrollToSection("features")}>
             Get Started
           </button>
-          <button onClick={handleButtonClick}>Why Shitify?</button>
+          <button onClick={() => scrollToSection("endorsement")}>
+            Why Shitify?
+          </button>
         </div>
       </section>
-      <section>
+      <section id="features">
         <h3 className="gradient-text animateOnViewport">Shittier than Shit</h3>
         <p className="animateOnViewport">
           It's time for a new beginning in shit code for the entire web
@@ -118,7 +128,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section>
+      <section id="endorsement">
         <h2 className="gradient-text animateOnViewport">
           Let's get our shit together
         </h2>
