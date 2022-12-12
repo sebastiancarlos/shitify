@@ -273,13 +273,18 @@ p {
   border: 1px solid rgb(38 38 38 / 1);
   border-radius: 0.75rem;
   padding: 2rem;
-  flex: 1;
   flex-basis: 320px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
   text-align: left;
+}
+
+@media (max-width: 830px) {
+  .box {
+    flex-grow: 1;
+  }
 }
 
 .box p {

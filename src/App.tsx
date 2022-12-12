@@ -68,48 +68,48 @@ function App() {
           shit.
         </p>
         <div className="box-container animateOnViewport">
-          <div className="box">
-            <img className="icon" src="bars-icon.svg" />
+          <div className="box animateOnViewport">
+            <img className="icon animateOnViewport" src="bars-icon.svg" />
             <h3>Shittier by numbers</h3>
             <p>
               There are a lot of benchmarks out there but believe me, most are
               shit. Shitify does it better, trust me bro.
             </p>
           </div>
-          <div className="box">
-            <img className="icon" src="ecosystem-icon.svg" />
+          <div className="box animateOnViewport">
+            <img className="icon animateOnViewport" src="ecosystem-icon.svg" />
             <h3>Ecosystem-friendly</h3>
             <p>
               Get out-of-the-box support for TypeScript, CoffeeScript, and
               LigmaScript.
             </p>
           </div>
-          <div className="box">
-            <img className="icon" src="lightning-icon.svg" />
+          <div className="box animateOnViewport">
+            <img className="icon animateOnViewport" src="lightning-icon.svg" />
             <h3>Blazingly Fast</h3>
             <p>
               Sometimes it's not only about the speed of your code, but the
               speed of your errors. Move fast and break things.
             </p>
           </div>
-          <div className="box">
-            <img className="icon" src="multi-icon.svg" />
+          <div className="box animateOnViewport">
+            <img className="icon animateOnViewport" src="multi-icon.svg" />
             <h3>Best for Mutation Testing</h3>
             <p>
               It's not all shits and giggles. Shitify is the best tool for
               mutation testing. This is our one legit use case.
             </p>
           </div>
-          <div className="box">
-            <img className="icon" src="server-icon.svg" />
+          <div className="box animateOnViewport">
+            <img className="icon animateOnViewport" src="server-icon.svg" />
             <h3>Deploy once, shit forever</h3>
             <p>
               Deploy on AWS, Azure, Google, or even on Elon Musk's personal
               server on freakin' Mars.
             </p>
           </div>
-          <div className="box">
-            <img className="icon" src="nextjs-icon.svg" />
+          <div className="box animateOnViewport">
+            <img className="icon animateOnViewport" src="nextjs-icon.svg" />
             <h3>Next.js support</h3>
             <p>
               Shitify has first-class support for Next.js. Make of that what you
