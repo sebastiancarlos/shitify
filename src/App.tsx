@@ -149,8 +149,15 @@ function App() {
             <img src="obama.webp" alt="obama" />
           </div>
           <div className="name-container">
-            <p className="name">Barack Obama</p>
-            <p className="title">44th President of the United States</p>
+            <img
+              className="pen"
+              src="obama-signature.svg"
+              alt="obama signature"
+            />
+            <p className="name">
+              Barack Obama
+              <span className="title">44th President of the United States</span>
+            </p>
           </div>
         </div>
         <button className="main animateOnViewport" onClick={handleButtonClick}>

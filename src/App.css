@@ -294,6 +294,7 @@ p {
   display: flex;
   align-items: center;
   margin-bottom: 3em;
+  margin-top: 2em;
 }
 
 .signature .image-container {
@@ -317,6 +318,8 @@ p {
 
 .signature .name-container {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .signature p {
@@ -325,6 +328,16 @@ p {
 
 .signature .title {
   opacity: 0.6;
+  padding-left: 12px;
+}
+
+.signature .pen {
+  width: inherit;
+  max-width: 66vw;
+  height: 70px;
+  padding-left: 13px;
+  aspect-ratio: inherit;
+  object-fit: inherit;
 }
 
 .footer {
