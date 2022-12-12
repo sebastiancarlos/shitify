@@ -343,6 +343,7 @@ p {
   padding-left: 13px;
   aspect-ratio: inherit;
   object-fit: inherit;
+  filter: drop-shadow(-2px 2px 6px rgba(185, 129, 85, 0.7));
 }
 
 .footer {
