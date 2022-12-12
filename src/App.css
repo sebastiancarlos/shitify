@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgb(255 255 255 / 0.87);
-  background-color: #242424;
+  background-color: black;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,7 +14,7 @@
   -webkit-text-size-adjust: 100%;
 
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   text-align: center;
 
@@ -46,8 +46,9 @@ body {
   margin: 0;
   display: flex;
   place-content: center;
-  min-width: 320px;
+  width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
@@ -102,8 +103,19 @@ a:hover {
 h2 {
   font-size: 4em;
   margin: 0;
+  margin-bottom: 0.5em;
   font-weight: 900;
   font-family: "Inter", sans-serif;
+}
+
+h3 {
+  font-size: 2.5em;
+  margin: 0;
+  font-weight: 900;
+  font-family: "Inter", sans-serif;
+}
+
+.gradient-text {
   -webkit-background-clip: text !important;
   background-clip: text;
   background: linear-gradient(180deg, #fff, #aaa), #fff;
@@ -135,6 +147,7 @@ h2 {
   background: conic-gradient(
     from 180deg at 50% 50%,
     #4a0901 0deg,
+
     #653216 180deg,
     #935b30 1turn
   );
@@ -154,7 +167,6 @@ h2 {
 .button-container {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 24px;
   place-content: center;
 }
 
@@ -199,10 +211,12 @@ button.main:hover {
   height: 100vh;
   width: 100vw;
   margin: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   padding: 50px;
+  overflow: hidden;
+  z-index: 99;
 }
 
 #bsod h1 {
@@ -217,4 +231,129 @@ button.main:hover {
   color: #fefeff;
   font-weight: 100;
   font-size: 1.5em;
+}
+
+section {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: black 0px -50px 50px 20px;
+  background: black;
+}
+
+section.main {
+  justify-content: center;
+  background: transparent;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "Space Grotesk", monospace;
+  max-width: 36rem;
+  color: #ffffffb2;
+}
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  width: 80vw;
+  padding-top: 25px;
+}
+
+.box {
+  border: 1px solid rgb(38 38 38 / 1);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  flex: 1;
+  flex-basis: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+}
+
+.box p {
+  margin: 0;
+}
+
+.box h3 {
+  font-size: 1em;
+}
+
+.signature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.signature .image-container {
+  display: flex;
+  width: 90px;
+  height: 90px;
+  min-width: 90px;
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+}
+
+.signature img {
+  aspect-ratio: 1;
+  width: 64px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 9999px;
+}
+
+.signature .name-container {
+  display: flex;
+}
+
+.signature p {
+  padding-left: 14px;
+}
+
+.signature .title {
+  opacity: 0.6;
+}
+
+.footer {
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+  align-items: flex-start;
+  min-height: initial;
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+.footer .logo {
+  transform: scale(0.5) translateX(-50%);
+  filter: saturate(0.1);
+  opacity: 0.8;
+}
+
+.footer .copyright {
+  margin-top: -17px;
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
+
+.animateOnViewport {
+  opacity: 0;
+  transform: translateY(24px) translateZ(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.inViewport {
+  opacity: 1;
+  transform: translateY(0) translateZ(0);
 }
